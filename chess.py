@@ -11,6 +11,8 @@ def parse_fen(fen):
         else:
             pieces[-1].append(char)
 
+    fen_pieces = [each for each[0:8] in pieces] 
+
     return fen_pieces, to_move
 
 
