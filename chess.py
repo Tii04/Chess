@@ -11,6 +11,10 @@ def parse_fen(fen):
         else:
             pieces[-1].append(char)
 
+    fen_pieces = [' '.join(str(piece) for piece in row[0:8]) for row in pieces]
+    fen_pieces = '\n'.join(fen_pieces)
+    to_move = pieces[-1][9]
+
     return fen_pieces, to_move
 
 
